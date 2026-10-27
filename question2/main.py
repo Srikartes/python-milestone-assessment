@@ -68,7 +68,7 @@ def find_highest_salary(employees):
     return highest
 find_highest_salary(all_employees)
 
-#calculate salary>50000 using list comprehension
+#calculate salary>50000 
 def find_salarygreater(employees):
     findsalarygreater = [emp for emp in employees if emp.salary > 50000]
     print(f"\n Salary Greater than>50000: ")
