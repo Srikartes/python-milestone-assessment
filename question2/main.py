@@ -78,7 +78,6 @@ find_salarygreater(all_employees)
 
 #count employee by role    
 def find_employees_by_role(employees):
-    """Employee Count by Role."""
     role_counts = {}
     for emp in employees:
         role_counts[emp.role] = role_counts.get(emp.role, 0) + 1
