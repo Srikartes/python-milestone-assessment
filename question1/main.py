@@ -48,17 +48,21 @@ def display_details(student):
           f"Grade: {get_grade(student)}\n"
           f"Result: {check_result(student)}\n"
           f"{'-'*20}")
+    #to display the student details based on input data     
+for student in students_list:
+    display_details(student)
+
     #print(display_details(students_list))
     #print(f"Highest Scoring Student: {top_student['StudentName']}\n")
 
 #Calculate the Highest scoring student and average above 75 using max,lambda list comprehension
 top_students_above_75 = [x for x in students_list if calculate_average(x) > 75]
 
-if top_students_above_75:
-   for student in top_students_above_75:
-        display_details(student)
-else:
-    print("\nNo students found with an average score greater than 75.")
+#if top_students_above_75:
+  # for student in top_students_above_75:
+   #    display_details(student)
+#else:
+  # print("\nNo students found with an average score greater than 75.")
 
 top_student = max(students_list, key=lambda x: calculate_average(x))
 print(f"Highest Scoring Student: {top_student['StudentName']}\n")
